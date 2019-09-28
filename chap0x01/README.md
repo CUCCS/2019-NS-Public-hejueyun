@@ -12,7 +12,7 @@
 
   
 
-  <img src=".\topology.png" height=250>
+  <img src=".\images\topology.png" height=250>
 
   *copyright: [huangwei](https://github.com/c4pr1c3)*
 
@@ -76,7 +76,7 @@
 
 
 
-​	<img src='./MultiLoad.png' height=200>
+​	<img src='.\images\MultiLoad.png' height=200>
 
 
 
@@ -90,7 +90,7 @@
   * `tcpdump -i eth0` 监听ping包
   * 靶机 `ping` 对方ip，观察到 `reply`；同时攻击主机显示 `icmp echo` ，说明可以直接访问
   
-  <img src="./ping_ac.png" height=200>
+  <img src=".\images\ping_ac.png" height=200>
 
 * 攻击者无法访问靶机
 
@@ -98,19 +98,19 @@
   - `ping xx.xx.xx.xx -w 10` 设置10s超时ping靶机ip
   - 结果显示 `100% packet loss` ,说明无法访问
 
-  <img src="./ping_wa.png" height=150>
+  <img src=".\images\ping_wa.png" height=150>
 
 * 网关可以直接访问攻击者主机和靶机
 
   * ping` 攻击者主机与靶机都有 `reply` 说明成立
 
-  <img src="ping_gw.png" height=200>
+  <img src=".\images\ping_gw.png" height=200>
 
 * 靶机的所有对外上下行流量必须经过网关
 
   * 简单测试：把网关debian开着，靶机可以ping攻击主机也可以上外网，关了debian就无法连接外网
 
-  <img src="gw.png" height=150>
+  <img src=".\images\gw.png" height=150>
 
   * 根据网络拓扑设置，在网关主机监听 `enp0s10` 网卡
   * 用 `intnet-2` 的主机 `ping` 外网,观察到网关同步显示 `icmp echo` 和 `ARP` ，说明结论成立
